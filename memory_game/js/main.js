@@ -1,6 +1,12 @@
-console.log("Up and running!");
 
-alert('Hello, friends.');
+/*console.log("Up and running!"); one of the console.logs to try out in developer tools*/
+
+/*var cardOne = "queen";
+var cardTwo = "queen";
+var cardThree = "king";
+var cardFour = "king"; initial variables created for intro to JS project */
+
+/*var cards = ["queen", "queen", "king", "king"]; old code for cards array*/
 
 var cards = [
 {
@@ -27,25 +33,53 @@ var cards = [
 
 var cardsInPlay = [];
 
-var checkForMatch = function (){
+function checkForMatch() {
     if (cardsInPlay[0] === cardsInPlay[1]) {
-        alert("You found a match!");
-    }
-     else {
-        alert("Sorry, try again.");
+        console.log("You found a match!");
+    } else {
+        console.log("Sorry, try again.");
     }
 }
 
-
-var flipCard = function (cardId) {
-    console.log("User flipped " + cards[cardId].rank);cardsInPlay.push(cards[cardId].rank);
+function flipCard(cardId) {
+    console.log("User flipped " + cards[cardId].rank); cardsInPlay.push(cards[cardId].rank);
     console.log(cards[cardId].cardImage);
     console.log(cards[cardId].suit);
-    if (cardsInPlay.length === 2){
-        checkForMatch();
-    }
+/*var cardOne = cards[0];
+
+cardsInPlay.push(cardOne);
+console.log("User flipped " + cardOne);
+
+var cardTwo = cards[2];
+cardsInPlay.push(cardTwo);
+console.log("User flipped " + cardTwo); previous code for homework*/
+
+
+
+}
+
+checkForMatch();
+flipCard(0);
+flipCard(2);
+
+/*function checkForMatch() {
+    if (cardsInPlay[0] === cardsInPlay[1]) {
+  console.log("You found a match!");
+} else {
+  console.log("Sorry, try again.");
+}
+}
+
+cardsInPlay.push(cards);
+
+
+function flipCard(cardId) {
+    if (cardsInPlay.length === 2)
+    console.log("User flipped" + cards[cardId]);
 }
 
 
+
+checkForMatch();
 flipCard(0);
-flipCard(2);
+flipCard(2);*/
